@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_99332E8D-4F66-4490-AC01-613D7CAD438C" id="_F4962839-F05C-43CA-8160-1967852FBC8F" name="DMN_9E80AFD1-767C-4760-9054-9CBA8638B225" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_99332E8D-4F66-4490-AC01-613D7CAD438C" id="_F4962839-F05C-43CA-8160-1967852FBC8F" name="CreditStatus">
   <itemDefinition id="_EDCB345B-E0C4-45BF-B679-BB218720F661" name="CustomerStatus" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
     <itemComponent id="_DDC8B782-B84C-49DA-B050-E65D20ECB5BC" name="Salary" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
       <typeRef>number</typeRef>

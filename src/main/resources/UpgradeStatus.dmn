@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_8E502083-ACC6-4106-8418-7DD370E243AD" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_E59C780E-A5C9-4C2C-9F46-9B21A6DAAD68" name="UpgradeStatus" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_8E502083-ACC6-4106-8418-7DD370E243AD">
   <dmn:extensionElements/>
@@ -75,6 +76,83 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+=======
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="https://kie.org/dmn/extensions/1.0" expressionLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kie.org/dmn/_99332E8D-4F66-4490-AC01-613D7CAD438C" id="_F4962839-F05C-43CA-8160-1967852FBC8F" name="CreditStatus">
+  <itemDefinition id="_EDCB345B-E0C4-45BF-B679-BB218720F661" name="CustomerStatus" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+    <itemComponent id="_DDC8B782-B84C-49DA-B050-E65D20ECB5BC" name="Salary" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+      <typeRef>number</typeRef>
+    </itemComponent>
+    <itemComponent id="_50642222-E6DD-48F7-B930-0B7DCD295C38" name="LoanAmount" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+      <typeRef>number</typeRef>
+    </itemComponent>
+  </itemDefinition>
+  <inputData name="Customer" id="_C6CE3005-24C7-40A6-A972-8A30BC8851C1">
+    <variable name="Customer" id="_94365C10-D106-44D2-9EE9-422C4E219F2E" typeRef="CustomerStatus" />
+  </inputData>
+  <decision name="CreditStatus" id="_EAD14740-77F6-4C52-AC1F-E638D05083CD">
+    <variable id="_50E4EB2B-E9CC-4920-B4BC-2AF1E7F53E1F" typeRef="string" name="CreditStatus" />
+    <informationRequirement id="_BD10D923-9A3B-43FA-A964-6DE6E46D5021">
+      <requiredInput href="#_C6CE3005-24C7-40A6-A972-8A30BC8851C1" />
+    </informationRequirement>
+    <decisionTable id="_52F1823F-C099-4FA9-9876-6B5230469CE2" typeRef="string" hitPolicy="FIRST" label="CreditStatus">
+      <input id="_9EEA9AD0-CD9D-433A-8BFE-7901036A3358">
+        <inputExpression id="_2B4297C3-3286-4612-8FFF-958F65123BC1" typeRef="number">
+          <text>Customer.Salary</text>
+        </inputExpression>
+      </input>
+      <input id="_12D5166A-B45B-4BFA-875B-3211D0225379">
+        <inputExpression id="_3ADA192E-7EA9-4004-B65F-91192B88AF01" typeRef="number">
+          <text>Customer.LoanAmount</text>
+        </inputExpression>
+      </input>
+      <output id="_FB300286-9589-4228-BB4A-80D1CB874E66" name="Output-1" />
+      <annotation name="Annotations" />
+      <rule id="_3E98AF77-9791-44B4-AFFA-CFABA440AA47">
+        <inputEntry id="_3D2AD45E-CC74-4A37-839B-C141BE586037">
+          <text>&gt; 80000</text>
+        </inputEntry>
+        <inputEntry id="_8A863A34-C603-475C-A02C-EEF85B54C9C8">
+          <text>&gt; 500000</text>
+        </inputEntry>
+        <outputEntry id="_E7A71098-AF06-41E9-970A-94E3EE81F174">
+          <text>&quot;Gold&quot;</text>
+        </outputEntry>
+        <annotationEntry>
+          <text>// Your annotations here</text>
+        </annotationEntry>
+      </rule>
+      <rule id="_93DE451A-F52E-400C-AAC9-CA63151236F0">
+        <inputEntry id="_0191FCA8-EB7A-4F4A-8871-0382665AB684">
+          <text>&gt; 50000</text>
+        </inputEntry>
+        <inputEntry id="_44BBB35D-F352-4E96-8C3B-705DDC6C963F">
+          <text>&gt; 250001</text>
+        </inputEntry>
+        <outputEntry id="_3BBB676F-242C-4322-8BA9-B4F99EFA2971">
+          <text>&quot;Silver&quot;</text>
+        </outputEntry>
+        <annotationEntry>
+          <text></text>
+        </annotationEntry>
+      </rule>
+      <rule id="_AF6631AC-DC63-4659-840C-EA839E405CBF">
+        <inputEntry id="_CD08EC68-A23A-429C-8888-1F5083951526">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="_2F41F07F-E3E4-468F-9B13-3A70E45084EA">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="_80D533B2-6F78-4F55-8BA2-055B31C3832E">
+          <text>&quot;Bronze&quot;</text>
+        </outputEntry>
+        <annotationEntry>
+          <text></text>
+        </annotationEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+>>>>>>> 7377a58a0599f35d54b1ffbfb2c819d686639ddd
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_5269CE72-903C-4EE3-9DF3-85CCFA701926" name="DRG">
       <di:extension>

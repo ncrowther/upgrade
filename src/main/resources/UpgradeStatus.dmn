@@ -3,11 +3,11 @@
   <dmn:extensionElements/>
   <dmn:inputData id="_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" name="Salary">
     <dmn:extensionElements/>
-    <dmn:variable id="_F333ACBF-1821-4486-8B62-EA356631069D" name="Salary"/>
+    <dmn:variable id="_F333ACBF-1821-4486-8B62-EA356631069D" name="Salary" typeRef="number"/>
   </dmn:inputData>
   <dmn:inputData id="_BFCE6840-8C0F-44C9-9D6D-1A018D195012" name="Loan">
     <dmn:extensionElements/>
-    <dmn:variable id="_BE7A86CB-24EE-49EF-B837-1CDBFE91C6E0" name="Loan"/>
+    <dmn:variable id="_BE7A86CB-24EE-49EF-B837-1CDBFE91C6E0" name="Loan" typeRef="number"/>
   </dmn:inputData>
   <dmn:decision id="_7D312499-B5EB-48D5-B8A3-4ABEBECBE80A" name="UpgradeStatus">
     <dmn:extensionElements/>
@@ -20,12 +20,12 @@
     </dmn:informationRequirement>
     <dmn:decisionTable id="_DEF7A601-0808-4F46-838D-365D12038B02" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_608E9A8D-AA49-4FF1-82FD-5786E3B7ED28">
-        <dmn:inputExpression id="_CF9309DB-7204-4A29-A154-9CF5C967D4EE">
+        <dmn:inputExpression id="_CF9309DB-7204-4A29-A154-9CF5C967D4EE" typeRef="number">
           <dmn:text>Loan</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_FC2F6AAC-A88B-48DE-A0F9-1885B60608E2">
-        <dmn:inputExpression id="_0C50F801-0D6E-4E45-B064-898F472987B6">
+        <dmn:inputExpression id="_0C50F801-0D6E-4E45-B064-898F472987B6" typeRef="number">
           <dmn:text>Salary</dmn:text>
         </dmn:inputExpression>
       </dmn:input>

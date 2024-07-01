@@ -21,12 +21,12 @@
     </dmn:informationRequirement>
     <dmn:decisionTable id="_E194B1F8-8C5A-4431-932D-279CAE57BD56" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_16BA343B-E66C-4855-A036-FD16E18444F8">
-        <dmn:inputExpression id="_495BD3A4-6807-4202-9FCA-42BA89460F50" typeRef="number">
+        <dmn:inputExpression typeRef="number">
           <dmn:text>Customer.Loan</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_86478C6A-7EF4-4027-9204-049E0FBA02A7">
-        <dmn:inputExpression id="_0DBDD309-D082-4015-8774-203D369B4230" typeRef="number">
+        <dmn:inputExpression typeRef="number">
           <dmn:text>Customer.Salary</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
@@ -34,10 +34,10 @@
       <dmn:annotation name="annotation-1"/>
       <dmn:rule id="_15C299C4-2283-400F-A9EB-C296A008649C">
         <dmn:inputEntry id="_D2AE5098-1D40-482D-BD92-14E118E58763">
-          <dmn:text>&gt;0</dmn:text>
+          <dmn:text>[0 .. 9999]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_EBDBA47D-903F-46C1-9A1D-91551A23716A">
-          <dmn:text>&gt;0</dmn:text>
+          <dmn:text>[0 .. 9999]</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AFD56865-E12B-42AE-B206-7B259E29C6D5">
           <dmn:text>"Standard"</dmn:text>
@@ -48,10 +48,10 @@
       </dmn:rule>
       <dmn:rule id="_CF0CA39A-A842-43F8-83BA-4FD798343465">
         <dmn:inputEntry id="_C9A0F96A-DBD7-48CF-B981-957E6F23681C">
-          <dmn:text>&gt; 10000</dmn:text>
+          <dmn:text>[10000 .. 99999]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_EB48E658-042A-4D45-92EB-281E0F07AE4B">
-          <dmn:text>&gt; 10000</dmn:text>
+          <dmn:text>[10000 .. 49999]</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_77F88AF0-5688-4AEE-A0D8-06923891C029">
           <dmn:text>"Bronze"</dmn:text>
@@ -62,10 +62,10 @@
       </dmn:rule>
       <dmn:rule id="_4733E003-740E-43E3-A0F0-03DD09BE1C86">
         <dmn:inputEntry id="_95BD120A-2069-465C-9521-FE5CEEE96A03">
-          <dmn:text>&gt;100000</dmn:text>
+          <dmn:text>[100000 .. 999999]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_CBE7ACB9-91EA-4164-8C29-5F360B84CA0A">
-          <dmn:text>&gt;50000</dmn:text>
+          <dmn:text>[50000 .. 999999]</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_1B88996C-518F-496E-960D-9761E064D98F">
           <dmn:text>"Silver"</dmn:text>
@@ -79,10 +79,24 @@
           <dmn:text>&gt;1000000</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_FAC3E0C8-F521-492C-8E32-C440A5615FF3">
-          <dmn:text>&gt;100000</dmn:text>
+          <dmn:text>&gt;1000000</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_3C9FD9EA-2A62-4D0D-83CB-1BED650B5FDF">
           <dmn:text>"Gold"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_5D359ACB-ED58-404A-B221-B26F6DF46023">
+        <dmn:inputEntry id="_4BBACACF-6C58-41EA-9853-4EBBF7FA4DA2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_EC15FB1A-3A38-4CFC-A925-3616A758A1FF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_84CEA913-3B0D-40C9-A39C-A12349A84609">
+          <dmn:text>"Unqualified"</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -96,9 +110,9 @@
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_E194B1F8-8C5A-4431-932D-279CAE57BD56">
             <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
+            <kie:width>197</kie:width>
+            <kie:width>177</kie:width>
+            <kie:width>129</kie:width>
             <kie:width>100</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>

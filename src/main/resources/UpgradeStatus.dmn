@@ -9,22 +9,15 @@
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" name="Salary">
+  <dmn:inputData id="_BFCE6840-8C0F-44C9-9D6D-1A018D195012" name="Customer">
     <dmn:extensionElements />
-    <dmn:variable id="_F333ACBF-1821-4486-8B62-EA356631069D" name="Salary" typeRef="number" />
-  </dmn:inputData>
-  <dmn:inputData id="_BFCE6840-8C0F-44C9-9D6D-1A018D195012" name="Loan">
-    <dmn:extensionElements />
-    <dmn:variable id="_BE7A86CB-24EE-49EF-B837-1CDBFE91C6E0" name="Loan" typeRef="number" />
+    <dmn:variable id="_BE7A86CB-24EE-49EF-B837-1CDBFE91C6E0" name="Customer" typeRef="Customer" />
   </dmn:inputData>
   <dmn:decision id="_7D312499-B5EB-48D5-B8A3-4ABEBECBE80A" name="UpgradeStatus">
     <dmn:extensionElements />
     <dmn:variable id="_47153763-93E9-4382-839A-8C01F4CF62DB" name="UpgradeStatus" typeRef="string" />
     <dmn:informationRequirement id="_51FBF992-23BF-4BBC-97F9-942A348A498E">
       <dmn:requiredInput href="#_BFCE6840-8C0F-44C9-9D6D-1A018D195012" />
-    </dmn:informationRequirement>
-    <dmn:informationRequirement id="_9E6DEB24-ED46-4393-A36E-BFA7CF4B3DA1">
-      <dmn:requiredInput href="#_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" />
     </dmn:informationRequirement>
     <dmn:decisionTable id="_DEF7A601-0808-4F46-838D-365D12038B02" hitPolicy="FIRST" preferredOrientation="Rule-as-Row" typeRef="string" label="UpgradeStatus">
       <dmn:input id="_608E9A8D-AA49-4FF1-82FD-5786E3B7ED28">
@@ -96,22 +89,13 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-drg-_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" dmnElementRef="_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" isCollapsed="false">
-        <dmndi:DMNStyle id="_84C6A70E-3C06-477F-8147-8E7901F1B760">
-          <dmndi:FillColor red="255" green="255" blue="255" />
-          <dmndi:StrokeColor red="0" green="0" blue="0" />
-          <dmndi:FontColor red="0" green="0" blue="0" />
-        </dmndi:DMNStyle>
-        <dc:Bounds x="260" y="220" width="100" height="50" />
-        <dmndi:DMNLabel id="_D2A130FF-9887-4CF0-BCB9-E0129ADE806F" />
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_BFCE6840-8C0F-44C9-9D6D-1A018D195012" dmnElementRef="_BFCE6840-8C0F-44C9-9D6D-1A018D195012" isCollapsed="false">
         <dmndi:DMNStyle id="_F8D6D855-0424-4A08-AAAF-96B08FA668D9">
           <dmndi:FillColor red="255" green="255" blue="255" />
           <dmndi:StrokeColor red="0" green="0" blue="0" />
           <dmndi:FontColor red="0" green="0" blue="0" />
         </dmndi:DMNStyle>
-        <dc:Bounds x="440" y="220" width="100" height="50" />
+        <dc:Bounds x="360" y="240" width="100" height="50" />
         <dmndi:DMNLabel id="_0B6B0C50-2A94-457D-AE09-CD52E1DFB70E" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_7D312499-B5EB-48D5-B8A3-4ABEBECBE80A" dmnElementRef="_7D312499-B5EB-48D5-B8A3-4ABEBECBE80A" isCollapsed="false">
@@ -124,11 +108,7 @@
         <dmndi:DMNLabel id="_6204F4B2-8A44-4824-BCD1-DE60BC0FF224" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_51FBF992-23BF-4BBC-97F9-942A348A498E" dmnElementRef="_51FBF992-23BF-4BBC-97F9-942A348A498E">
-        <di:waypoint x="490" y="245" />
-        <di:waypoint x="410" y="150" />
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_9E6DEB24-ED46-4393-A36E-BFA7CF4B3DA1-AUTO-TARGET" dmnElementRef="_9E6DEB24-ED46-4393-A36E-BFA7CF4B3DA1">
-        <di:waypoint x="310" y="245" />
+        <di:waypoint x="410" y="265" />
         <di:waypoint x="410" y="150" />
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>

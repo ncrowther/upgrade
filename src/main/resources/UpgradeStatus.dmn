@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dmn:definitions xmlns:dmn="https://www.omg.org/spec/DMN/20230324/MODEL/" xmlns="https://kiegroup.org/dmn/_8E502083-ACC6-4106-8418-7DD370E243AD" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="https://kie.org/dmn/extensions/1.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_E59C780E-A5C9-4C2C-9F46-9B21A6DAAD68" name="UpgradeStatus" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/" namespace="https://kiegroup.org/dmn/_8E502083-ACC6-4106-8418-7DD370E243AD">
   <dmn:extensionElements />
+  <dmn:itemDefinition id="_3CDF3F31-DB99-432F-9840-7FAF97AFD7B4" name="Customer" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+    <dmn:itemComponent id="_54AF4CB5-7111-4A7A-83DB-C5F1485467A3" name="Salary" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9E2DFA92-5702-4CEF-8ACF-D3161B1B8053" name="Mortgage" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
   <dmn:inputData id="_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" name="Salary">
     <dmn:extensionElements />
     <dmn:variable id="_F333ACBF-1821-4486-8B62-EA356631069D" name="Salary" typeRef="number" />
@@ -18,7 +26,7 @@
     <dmn:informationRequirement id="_9E6DEB24-ED46-4393-A36E-BFA7CF4B3DA1">
       <dmn:requiredInput href="#_1CE5B29B-8FCF-4B21-B6AE-826DF1B8C7CB" />
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_DEF7A601-0808-4F46-838D-365D12038B02" hitPolicy="FIRST" preferredOrientation="Rule-as-Row" typeRef="string">
+    <dmn:decisionTable id="_DEF7A601-0808-4F46-838D-365D12038B02" hitPolicy="FIRST" preferredOrientation="Rule-as-Row" typeRef="string" label="UpgradeStatus">
       <dmn:input id="_608E9A8D-AA49-4FF1-82FD-5786E3B7ED28">
         <dmn:inputExpression id="_CF9309DB-7204-4A29-A154-9CF5C967D4EE" typeRef="number">
           <dmn:text>Loan</dmn:text>

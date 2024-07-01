@@ -5,7 +5,7 @@
     <dmn:itemComponent id="_54AF4CB5-7111-4A7A-83DB-C5F1485467A3" name="Salary" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_9E2DFA92-5702-4CEF-8ACF-D3161B1B8053" name="Mortgage" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
+    <dmn:itemComponent id="_9E2DFA92-5702-4CEF-8ACF-D3161B1B8053" name="Loan" isCollection="false" typeLanguage="https://www.omg.org/spec/DMN/20230324/FEEL/">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
@@ -22,12 +22,12 @@
     <dmn:decisionTable id="_DEF7A601-0808-4F46-838D-365D12038B02" hitPolicy="FIRST" preferredOrientation="Rule-as-Row" typeRef="string" label="UpgradeStatus">
       <dmn:input id="_608E9A8D-AA49-4FF1-82FD-5786E3B7ED28">
         <dmn:inputExpression id="_CF9309DB-7204-4A29-A154-9CF5C967D4EE" typeRef="number">
-          <dmn:text>Loan</dmn:text>
+          <dmn:text>Customer.Loan</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_FC2F6AAC-A88B-48DE-A0F9-1885B60608E2">
         <dmn:inputExpression id="_0C50F801-0D6E-4E45-B064-898F472987B6" typeRef="number">
-          <dmn:text>Salary</dmn:text>
+          <dmn:text>Customer.Salary</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_67C1F1AC-6E61-45C3-BA08-B90184451FE8" />
